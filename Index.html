@@ -19,7 +19,9 @@
         $('#counter_2').countdown({
           image: 'img/digits.png',
           startTime: '00:10',
-          timerEnd: function(){ alert('end!'); },
+          timerEnd: function(){ 
+		  //alert('end!'); 
+		  },
           format: 'mm:ss'
         });
       });
@@ -47,23 +49,7 @@
 
 <div data-role="page" id="page">
 	<div data-role="header">
-		<h1>Pagina uno</h1>
-	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-			<li><a href="#page2">Pagina due</a></li>
-            <li><a href="#page3">Pagina tre</a></li>
-			<li><a href="#page4">Pagina quattro</a></li>
-		</ul>		
-	</div>
-	<div data-role="footer">
-		<h4>Piè di pagina</h4>
-	</div>
-</div>
-
-<div data-role="page" id="page2">
-	<div data-role="header">
-		<h1>Pagina due</h1>
+		<h1>Countdown Sharm 2013</h1>
 	</div>
 	<div data-role="content">	
 		
@@ -91,29 +77,7 @@
 	</div>
 </div>
 
-<div data-role="page" id="page3">
-	<div data-role="header">
-		<h1>Pagina tre</h1>
-	</div>
-	<div data-role="content">	
-		Contenuto		
-	</div>
-	<div data-role="footer">
-		<h4>Piè di pagina</h4>
-	</div>
-</div>
 
-<div data-role="page" id="page4">
-	<div data-role="header">
-		<h1>Pagina quattro</h1>
-	</div>
-	<div data-role="content">	
-		Contenuto		
-	</div>
-	<div data-role="footer">
-		<h4>Piè di pagina</h4>
-	</div>
-</div>
 
 </body>
 </html>
