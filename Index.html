@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Applicazione Web jQuery Mobile</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.countdown.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+      $(function(){
+        $('#counter').countdown({
+          image: 'img/digits.png',
+          startTime: '01:12:12:00'
+        });
+
+        $('#counter_2').countdown({
+          image: 'img/digits.png',
+          startTime: '00:10',
+          timerEnd: function(){ alert('end!'); },
+          format: 'mm:ss'
+        });
+      });
+    </script>
+    <style type="text/css">
+      br { clear: both; }
+      .cntSeparator {
+        font-size: 54px;
+        margin: 10px 7px;
+        color: #000;
+      }
+      .desc { margin: 7px 3px; }
+      .desc div {
+        float: left;
+        font-family: Arial;
+        width: 70px;
+        margin-right: 65px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+      }
+    </style>
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>Pagina uno</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">Pagina due</a></li>
+            <li><a href="#page3">Pagina tre</a></li>
+			<li><a href="#page4">Pagina quattro</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer">
+		<h4>Piè di pagina</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Pagina due</h1>
+	</div>
+	<div data-role="content">	
+		
+        
+        <div id="counter"></div>
+  <div class="desc">
+    <div>Días</div>
+    <div>Horas</div>
+    <div>Minutos</div>
+    <div>Segundos</div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div id="counter_2"></div>
+  <div class="desc">
+    <div>Minutos</div>
+    <div>Segundos</div>
+  </div>
+        
+        
+	</div>
+	<div data-role="footer">
+		<h4>Piè di pagina</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Pagina tre</h1>
+	</div>
+	<div data-role="content">	
+		Contenuto		
+	</div>
+	<div data-role="footer">
+		<h4>Piè di pagina</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Pagina quattro</h1>
+	</div>
+	<div data-role="content">	
+		Contenuto		
+	</div>
+	<div data-role="footer">
+		<h4>Piè di pagina</h4>
+	</div>
+</div>
+
+</body>
+</html>
