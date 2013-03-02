@@ -11,19 +11,37 @@
 
 <script type="text/javascript">
       $(function(){
+		    var d1=new Date(2013,4,5); // jan,1 2011
+			var d2=new Date(); // now
+			
+			var diff=d2-d1,sign=diff<0?-1:1,milliseconds,seconds,minutes,hours,days;
+			diff/=sign; // or diff=Math.abs(diff);
+			diff=(diff-(milliseconds=diff%1000))/1000;
+			diff=(diff-(seconds=diff%60))/60;
+			diff=(diff-(minutes=diff%60))/60;
+			days=(diff-(hours=diff%24))/24;
+			
+			/*console.info(sign===1?"Elapsed: ":"Remains: ",
+						 days+" days, ",
+						 hours+" hours, ",
+						 minutes+" minutes, ",
+						 seconds+" seconds, ",
+						 milliseconds+" milliseconds.");*/
+		  
+		  
         $('#counter').countdown({
           image: 'img/digits.png',
-          startTime: '01:12:12:00'
+          startTime: days+':'+hours+':'+minutes+':'+seconds
         });
 
-        $('#counter_2').countdown({
+        /*$('#counter_2').countdown({
           image: 'img/digits.png',
           startTime: '00:10',
           timerEnd: function(){ 
 		  //alert('end!'); 
 		  },
           format: 'mm:ss'
-        });
+        });*/
       });
     </script>
     <style type="text/css">
@@ -56,24 +74,17 @@
         
         <div id="counter"></div>
   <div class="desc">
-    <div>Días</div>
-    <div>Horas</div>
-    <div>Minutos</div>
-    <div>Segundos</div>
+    <div>Giorni</div>
+    <div>Ore</div>
+    <div>Minuti</div>
+    <div>Secondi</div>
   </div>
-  <br />
-  <br />
-  <br />
-  <div id="counter_2"></div>
-  <div class="desc">
-    <div>Minutos</div>
-    <div>Segundos</div>
-  </div>
+ 
         
         
 	</div>
 	<div data-role="footer">
-		<h4>Piè di pagina</h4>
+		<h4>E me son careg!</h4>
 	</div>
 </div>
 
